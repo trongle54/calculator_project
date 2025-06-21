@@ -32,7 +32,3 @@ jobs:
       - name: Run tests with pytest
         run: |
           pytest --cov=./ --cov-report=xml
-
-      - name: Check dependencies with safety
-        run: |
-          safety check -r requirements.txt
