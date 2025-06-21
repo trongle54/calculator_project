@@ -14,7 +14,7 @@ def add():
         b = float(data["b"])
         result = calc.add(a, b)
         return jsonify({"result": result})
-    except (KeyError, ValueError) as e:
+    except (KeyError, ValueError):
         return (
             jsonify({"error": "Invalid input, please provide two numbers (a, b)"}),
             400,
@@ -30,7 +30,7 @@ def subtract():
         b = float(data["b"])
         result = calc.subtract(a, b)
         return jsonify({"result": result})
-    except (KeyError, ValueError) as e:
+    except (KeyError, ValueError):
         return (
             jsonify({"error": "Invalid input, please provide two numbers (a, b)"}),
             400,
@@ -46,7 +46,7 @@ def multiply():
         b = float(data["b"])
         result = calc.multiply(a, b)
         return jsonify({"result": result})
-    except (KeyError, ValueError) as e:
+    except (KeyError, ValueError):
         return (
             jsonify({"error": "Invalid input, please provide two numbers (a, b)"}),
             400,
@@ -62,7 +62,7 @@ def divide():
         b = float(data["b"])
         result = calc.divide(a, b)
         return jsonify({"result": result})
-    except (KeyError, ValueError) as e:
+    except (KeyError, ValueError):
         return (
             jsonify({"error": "Invalid input, please provide two numbers (a, b)"}),
             400,
